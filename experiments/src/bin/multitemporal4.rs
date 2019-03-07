@@ -234,7 +234,7 @@ mod triple {
     use differential_dataflow::lattice::Lattice;
     impl<S: Lattice, T: Lattice, U: Lattice> Lattice for Triple<S, T, U> {
         fn minimum() -> Self { Triple { first: S::minimum(), second: T::minimum(), third: U::minimum() }}
-        fn maximum() -> Self { Triple { first: S::maximum(), second: T::maximum(), third: U::maximum() }}
+        //fn maximum() -> Self { Triple { first: S::maximum(), second: T::maximum(), third: U::maximum() }}
         fn join(&self, other: &Self) -> Self {
             Triple {
                 first: self.first.join(&other.first),

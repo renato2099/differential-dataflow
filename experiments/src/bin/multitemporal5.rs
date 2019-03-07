@@ -250,7 +250,7 @@ mod pair {
     use differential_dataflow::lattice::Lattice;
     impl<S: Lattice, T: Lattice> Lattice for Pair<S, T> {
         fn minimum() -> Self { Pair { first: S::minimum(), second: T::minimum() }}
-        fn maximum() -> Self { Pair { first: S::maximum(), second: T::maximum() }}
+        //fn maximum() -> Self { Pair { first: S::maximum(), second: T::maximum() }}
         fn join(&self, other: &Self) -> Self {
             Pair {
                 first: self.first.join(&other.first),
