@@ -5,10 +5,11 @@ authors = ["Frank McSherry <fmcsherry@me.com>"]
 
 [dependencies]
 core_affinity = "0.5.9"
-rand="0.3.13"
+rand="0.5.1"
 abomonation = "0.7"
 abomonation_derive = "0.3"
 #timely = "0.7"
 timely = { git = "https://github.com/TimelyDataflow/timely-dataflow" }
 differential-dataflow = { path = "../" }
 graph_map = { git = "https://github.com/frankmcsherry/graph-map" }
+libmath = "0.1.4"
